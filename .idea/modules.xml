@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sendtoterminal.iml" filepath="$PROJECT_DIR$/.idea/modules/sendtoterminal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sendtoterminal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sendtoterminal_main.iml" group="sendtoterminal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sendtoterminal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sendtoterminal_test.iml" group="sendtoterminal" />
+    </modules>
+  </component>
+</project>

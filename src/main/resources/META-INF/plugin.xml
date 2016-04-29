@@ -1,0 +1,61 @@
+<idea-plugin url="https://github.com/cursive-ide/sendtoterminal"
+             version="2">
+  <name>SendToTerminal</name>
+  <id>SendToTerminal</id>
+
+  <description><![CDATA[
+  <p>Port of Sublime Text's <a href="https://github.com/wch/SendText">SendText plugin</a>.</p>
+
+  <p>This package sends text to a terminal (or other program). If text is selected, it will send the selection to the
+  terminal; if no text is selected, it will send the current line to the terminal and move the cursor to the next line.
+  This is very useful for coding in interpreted languages.</p>
+
+  <p>Send To Terminal presently works with:
+
+  <ul>
+    <li>Terminal.app on Mac OS X. Send To Terminal will send the text to the most recently active Terminal window.</li>
+    <li>iTerm on Mac OS X. Send To Terminal will send the text to the most recently iTerm window.</li>
+    <li>GNU screen on any platform (Linux and Mac OS X). Screen is a terminal multiplexer which you can start in any
+    terminal emulator. Send To Terminal will send the text to the most recently active screen session.</li>
+    <li>tmux on any platform (Linux and Mac OS X). tmux is a terminal multiplexer (like GNU screen) which you can start
+    in any terminal emulator. Send To Terminal will send the text to the most recently active tmux session.</li>
+  </ul>
+  </p>
+    ]]>
+  </description>
+  <change-notes><![CDATA[
+        <html>
+        </html>
+        ]]>
+  </change-notes>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <version>1.0.0-SNAPSHOT</version>
+  <category>Code Tools</category>
+  <vendor url="https://cursive-ide.com"
+          email="cursive@cursive-ide.com">Cursive
+  </vendor>
+
+  <idea-version since-build="143.379" until-build="145.9999"/>
+
+
+  <project-components>
+  </project-components>
+
+  <actions>
+    <action id="SendToTerminalAction"
+            class="cursive.SendToTerminalAction"
+            text="Send To Terminal"
+            description="Send selected text or current line to terminal">
+    </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable id="SendToTerminal" displayName="Send To Terminal"
+                             groupId="tools"
+                             instance="cursive.SendToTerminalConfigurable"/>
+    <applicationService serviceInterface="cursive.SendToTerminalSettings"
+                        serviceImplementation="cursive.SendToTerminalSettings"/>
+  </extensions>
+</idea-plugin>
